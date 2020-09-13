@@ -1,12 +1,11 @@
 <?php
-	//Executa o comando SQL
-	$query = mysqli_query ($con, $SQL);
-	if($query){
-		echo $texto;
-		echo "<a href='menu.php'>Voltar</a>";
-	}else{
-		echo mysqli_error ($con);
-	}
+    $query = mysqli_query($con, $SQL);
+    if($query){
+       echo "Edicao realizada com sucesso!</br>";
+       echo "<a href='menu.php'>Voltar</a>";
 
-	mysqli_close ($con);
+    }else{
+       echo mysqli_error($con);
+    }
+    mysqli_close($con);
 ?>
